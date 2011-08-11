@@ -1,0 +1,71 @@
+#stats_box {
+	border: 1px solid black;
+	margin-bottom: 1em;
+}
+
+#stats_wrap_tight {
+ 	background-color: white;
+ 	padding: 1em;
+ 	padding-top:0;
+ 	padding-bottom: 0;
+}
+
+#stats_wrap_status_text {
+	display: inline;
+}
+
+#stats_wrap_status_edit {
+	display:inline;
+	float: right;
+	padding-right:1em;
+}
+
+#stat_footer_wrap div:first-child {
+	background-color: white;
+	float: none;
+	display:inline;
+}
+
+#stat_footer_wrap div {
+	display:inline;
+}
+
+/* MODULE code */
+.activities_module > div{
+	padding-bottom:.25em;
+}
+
+.activities_module li {
+	display: inline;
+	float:left;
+	list-style-type: none;
+	padding: 0 .3em;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.activities_module ul li:first-child {
+	border: 1px solid black;
+}
+
+.activities_module ul {
+	height:1.5em;
+	line-height: 1em;
+	width:12em;
+	margin: auto;
+}
+
+stat_current_num {
+	clear: both;
+}
+
+/* Complete Color */
+.ab_complete {
+	background-color: white;
+}
+
+/* Incomplete Color */
+.ab_incomplete {
+	background-color: gray;
+}

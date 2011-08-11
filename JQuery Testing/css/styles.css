@@ -1,0 +1,152 @@
+*
+{
+margin:0;
+padding:5px;
+}
+
+#accordion_reg
+{
+background: #f0f0f0;
+padding: 5px;
+}
+
+#accordion_wrap
+{
+font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+font-size: 11px;
+margin: 0 auto;
+background: #ffffff;
+}
+
+h1 
+{
+	margin-bottom: 15px;
+	
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: normal;
+	
+	color: #808080;
+}
+
+/* @end */
+
+/* @group Accordion */
+
+dl.accordion
+{
+	width: 800px;
+
+}
+
+/* @group Ebene 1 */
+
+dl.accordion dt
+{
+	position: relative;
+	height: 16px;
+	padding: 5px 0 2px 25px;
+	border-bottom:1px #ffffff dashed;
+	font-weight: bold;
+	color: white;
+	background: #808080 url('../images/icon_accordion_closed.png') no-repeat;
+	cursor: help;
+	
+}
+
+dl.accordion dt
+{
+	cursor: help;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='icon_accordion_closed.png', sizingMethod='crop');
+	background-image: none;
+}
+
+dl.accordion dt.open
+{
+	background-image: url('../images/icon_accordion_open.png');
+}
+
+dl.accordion dt.open
+{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='icon_accordion_open.png', sizingMethod='crop');
+	background-image: none;
+}
+
+dl.accordion dd
+{
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	z-index:0;
+}
+
+/* @group Inhalt */
+
+dl.accordion dd.sub_accordion
+{
+	z-index:0;
+}
+
+dl.accordion dd.accordion_content
+{
+	padding: 0 10px 0 5px;
+}
+
+dl.accordion dd.accordion_content p
+{
+	padding: 5px 0 7px 0;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Ebene 2 */
+
+dl.accordion dd dl dt
+{
+	padding-left: 25px;
+	background-color: #a0a0a0;
+	background-position: 0px 0;
+}
+
+dl.accordion dd dl dd.accordion_content
+{
+	padding-left: 0px;
+}
+
+/* @end */
+
+/* @group Ebene 3 */
+
+dl.accordion dd dl dd dl dt
+{
+	padding-left: 0px;
+	background-color: #fff;
+	background-position: 10px 0;
+}
+
+dl.accordion dd dl dd dl dd.accordion_content
+{
+	padding-left: 35px;
+}
+
+/* @end */
+
+/* @group Ebene 4 */
+
+dl.accordion dd dl dd dl dd dl dt
+{
+	padding-left: 85px;
+	background-color: #fff;
+	background-position: 60px 0;
+}
+
+dl.accordion dd dl dd dl dd dl dd.accordion_content
+{
+	padding-left: 85px;
+}
+
+/* @end */
+
+/* @end */

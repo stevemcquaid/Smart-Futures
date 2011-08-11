@@ -1,0 +1,109 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ProgramPage.master.cs" Inherits="master_pages_EMentoring_ProgramPage" %>
+
+<%@ Register TagPrefix="sp" TagName="SponsorBar" Src="~/site/EMentoring/_other/sponsors/SponsorsBar.ascx" %>
+<%@ Register TagPrefix="footers" TagName="Copyright" Src="~/site/EMentoring/_other/copyright/Copyright.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title></title>
+
+	<asp:ContentPlaceHolder ID="head" runat="server" />
+
+	<!-- Your content here! -->
+
+	<link href="/site/EMentoring/_assets/style/style.css" rel="stylesheet" type="text/css"  />
+	<link href="/site/EMentoring/_assets/jquery-ui/jquery-ui-1.8.15.custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	
+	<div id="page" class="wrap">
+    
+		<!-- begin left navigation -->
+	    <asp:ContentPlaceHolder ID="navigation" runat="server"></asp:ContentPlaceHolder>
+		<!-- end left navigation -->
+
+
+
+
+		<!-- begin content -->
+		<div id="content" class="wrap">
+			
+
+		  <!-- begin head -->
+		  <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
+		  <!-- end head -->
+
+
+
+		  <!-- begin inner content -->
+		  <div class="inner">
+		  <asp:ContentPlaceHolder ID="innerContent" runat="server"></asp:ContentPlaceHolder>
+		  </div>
+		  <!-- end inner content -->
+
+
+
+		  <!-- begin footer -->
+		  <div id="footer">
+			<div class="wrap">
+				<asp:ContentPlaceHolder ID="footerContent" runat="server"></asp:ContentPlaceHolder>
+
+
+				<div id="sponsors">
+					<h5><span>View Our Corporate Sponsors</span></h5>
+					<div class="wrap">
+						<div class="single">
+						<img alt="pic" src="/site/EMentoring/_assets/style/images/highmark.jpg">
+						<h5>Highmark Healthy High 5</h5>
+						<a class="text_link" href="">About</a>
+						</div>
+						<div class="single">
+						<img alt="pic" src="/site/EMentoring/_assets/style/images/bnymellon.jpg">
+						<h5>BNY Mellon</h5>
+						<a class="text_link" href="">About</a>
+						<a class="text_link" href="">Careers at BNYM</a>
+						<a class="text_link" href="">Corporate Social Responsibility</a>
+						</div>
+						<div class="single">
+						<img alt="pic" src="/site/EMentoring/_assets/style/images/duquesnelight.jpg">
+						<h5>Duquesne Light</h5>
+						<a class="text_link" href="">Community Relations</a>
+						<a class="text_link" href="">Careers at Duquesne Light</a>
+						</div>
+						<div class="single">
+						<img alt="pic" src="/site/EMentoring/_assets/style/images/upmc.jpg">
+						<h5>UPMC</h5>
+						<a class="text_link" href="">About</a>
+						<a class="text_link" href="">Careers at UPMC</a>
+						<a class="text_link" href="">Dignity and Respect Campaign</a>
+						</div>
+						<div class="single">
+						<img alt="pic" src="/site/EMentoring/_assets/style/images/americaneagle.jpg">
+						<h5>American Eagle Outfitters</h5>
+						<a class="text_link" href="">About</a>
+						<a class="text_link" href="">Careers at AE</a>
+						<a class="text_link" href="">AE Foundation</a>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="Div2">
+					Copyright 2011 Keys2Work, LLC.<br/> 
+					Rights in Pennsylvania reserved by <a href="">Smart Futures</a> | Privacy Policy
+				</div>
+
+			</div>
+		  </div>
+		  <!-- end footer -->
+
+		</div>
+		<!-- end content -->
+    
+	</div>
+
+	
+</body>
+</html>

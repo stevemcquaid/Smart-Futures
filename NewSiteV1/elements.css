@@ -1,0 +1,232 @@
+/* HORIZONTAL LINE */
+hr {
+	width:100%;
+	border: none;
+	border-top: 1px solid black;
+	clear:both;
+}
+
+/* HEADER */
+#header_left {
+/* image height */
+	height: 60px;
+	float: left;
+	background-color: white;
+/* 	edge of page! */
+	margin-left: .8em;
+	margin-top: .8em;
+}
+ 
+#header_left_wrap_tight {
+	width: 9.4em;
+	height: 3.8em;
+	background-color: white;
+}
+
+#header_right{
+	float: right;
+/* 	thin top and bottom padding */
+	background-color: white;
+	height: 2.9em;
+/* 	used for vertical centering = .8em + offset from top edge of logo*/
+	margin-top: 1.7em;
+/* 	edge of page! */
+	margin-right: .8em;
+}
+
+#header_right > a {
+/* 	controls "height"  ORDER={top, right, bottom, left} */
+	padding: .5em 1em .5em 1em;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	border: 1px solid black;
+}
+
+#header_right > a:hover {
+	color: red;
+}
+
+/* TAB MENU */
+ul {
+	background-color:white;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+/* begin css tabs */
+
+ul#tabnav { /* general settings */
+	text-transform: uppercase;                       
+	text-align: left; /* set to left, right or center */
+	margin: 0; /* set margins as desired */
+	font: bold 1.2em Helvetica; /* set font as desired */
+	border-bottom: 1px solid black; /* set border COLOR as desired */
+	list-style-type: none;
+	padding: 15px 10px 15px 30px; /* FIRST & THIRD number must change with respect to padding-top (X) below */
+	background-color: white;
+}
+
+ul#tabnav li { /* do not change */
+	display: inline;
+}
+
+#tab_wrap>div#tab1 li.tab1, #tab_wrap>div#tab2 li.tab2, #tab_wrap>div#tab3 li.tab3, #tab_wrap>div#tab4 li.tab4 { /* settings for selected tab */
+	border-bottom: 1px solid white; /* set border color to page background color */
+	background-color: white; /* set background color to match above border color */
+}
+
+#tab_wrap>div li.tab1 a, #tab_wrap>div#tab2 li.tab2 a, #tab_wrap>div#tab3 li.tab3 a, #tab_wrap>div#tab4 li.tab4 a { /* settings for selected tab link */
+	background-color: white; /* set selected tab background color as desired */
+	color: red; /* set selected tab link color as desired */
+	position: relative;
+	top: 1px;
+	padding-top: 15px; /* must change with respect to padding (X) above and below */
+}
+
+#tab_wrap>div li.tab1 a:hover, #tab_wrap>div#tab2 li.tab2 a:hover, #tab_wrap>div#tab3 li.tab3 a:hover, #tab_wrap>div#tab4 li.tab4 a:hover { /* settings for selected tab link hovering*/
+	padding-bottom:14px; /* must change with respect to padding (X) above and below */
+}
+
+ul#tabnav li a { /* settings for all tab links */
+	padding: 15px 15px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+	padding-top: 14px; /* Set this to padding-top (X) above - 1px */
+	border: 1px solid black; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+	background-color: white; /* set unselected tab background color as desired */
+	color: #666; /* set unselected tab link color as desired */
+	margin-right: 0px; /* set additional spacing between tabs as desired */
+	text-decoration: none;
+	border-bottom: none;
+	top: 1px;
+}
+
+ul#tabnav a:hover { /* settings for hover effect */
+	background-color: white; /* set desired hover color */
+	border-bottom: 1px solid white; /* set border color to page background color */
+}
+
+/* end css tabs */
+
+h2 {
+	font-size: medium;
+	font-weight: bold;
+}
+
+
+/* Activity Feed Styling */
+
+#activity_wrap_tight {
+	width: 100%;
+	height: 17em; 
+}
+
+.li_item_date_pair{
+	background-color: white;
+	padding: 1em;
+	padding-top:0;
+	overflow: auto;
+	height:14.35em;
+}
+
+.li_item_date_pair > div{
+	background-color: white;
+	padding: 1em;
+}
+
+.li_item_date_pair div.li_item_date_pair_left{
+	display:inline;
+	background-color: white;
+}
+
+.li_item_date_pair div.li_item_date_pair_right /* NOTE - This element now removed. */ {
+	display:inline;
+	text-align: right;
+	background-color: white;
+	float:right;
+}
+
+#AF_left {
+	background-color: white;
+	border: 1px solid black;
+	float:left;
+	width: 65%;
+	height: 100%;
+}
+
+#AF_right {
+	background-color: white;
+	border: 1px solid black;
+	float:right;
+	width:30%;
+}
+
+#stats_wrap {
+ 	background-color: white;
+ 	padding: 1em;
+ 	padding-top:0;
+ 	padding-bottom: 0;
+}
+
+.top_bottom_padding {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background-color: white;
+}
+
+#news_wrap_tight {
+	border:1px solid black;
+}
+
+.h2_in_main_section{
+	padding:.25em;
+	background-color: white;
+}
+
+#stats_wrap_status_text {
+	display: inline;
+}
+
+#stats_wrap_status_edit {
+	display:inline;
+	float: right;
+	padding-right:1em;
+}
+
+#stat_footer_wrap div:first-child {
+	background-color: white;
+	float: none;
+	display:inline;
+}
+
+#stat_footer_wrap div {
+	display:inline;
+}
+
+
+/* AC code */
+.activities_completed > div{
+	padding-bottom:.25em;
+}
+
+.activities_completed li {
+	display: inline;
+	float:left;
+	list-style-type: none;
+	padding: 0 .3em;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.activities_completed ul li:first-child {
+	border: 1px solid black;
+}
+
+.activities_completed ul {
+	height:2em;
+	line-height: 1.9em;
+	padding-left: .5em; /* Controls centering (offset) */
+}

@@ -1,0 +1,18 @@
+*{padding:0;margin:0;}
+a{display:table-cell;padding:0;margin:0;text-decoration:none;}
+body{padding:.5em;}
+.center{display:table-cell;}
+.mentee_box{height:6em;width:100%;display:table;background-color:blue;}
+.profile{height:6em;display:table-cell;background-color:white;vertical-align:middle;width:40%;font-size:1.5em;border-left:25px solid gray;padding:.5em;}.profile .mentee_pic{display:table-cell;vertical-align:middle;}
+.profile .mentee_name{display:table-cell;vertical-align:middle;background-color:white;padding:.5em;min-width:5em;}
+.profile:hover{border-left-color:blue;}
+.activities{height:6em;font-size:1.3em;display:table-cell;background-color:white;vertical-align:middle;width:40%;border-left:25px solid gray;}.activities>.center{display:table;display:table;width:100%;height:3em;vertical-align:middle;background-color:white;}
+.activities .activity_data_left{display:table-cell;width:50%;text-align:left;background-color:white;vertical-align:middle;padding:.5em;background-color:white;}.activities .activity_data_left .last_activity_completed_num{display:table-cell;width:50%;text-align:left;background-color:white;border:1px solid black;padding:.3em .5em .3em .5em;}
+.activities .activity_data_left .last_activity_completed_date{display:table-cell;width:50%;text-align:right;background-color:white;padding-left:1em;}
+.activities .activity_data_right{display:table-cell;width:50%;text-align:right;background-color:white;vertical-align:middle;padding:.5em;min-width:50px;text-align:right;background-color:white;}
+.activities:hover{border-left-color:blue;}
+.messages{height:6em;font-size:1.3em;display:table-cell;background-color:white;vertical-align:middle;text-align:center;width:20%;border-left:25px solid gray;padding:.5em;}.messages .center{display:table;width:100%;height:3em;vertical-align:middle;background-color:white;}
+.messages .last_date_sent{text-align:center;display:block;padding:.3em;background-color:white;}
+.messages .message_count{display:table;margin:auto;width:70%;padding:.3em;}.messages .message_count .unread{display:table-cell;width:50%;text-align:center;background-color:white;padding:.3em;border:1px dashed black;border-right:4px solid black;background-color:white;font-weight:bold;}
+.messages .message_count .total{display:table-cell;width:50%;text-align:center;background-color:white;padding:.3em;border:1px dashed black;border-left:none;}
+.messages:hover{border-left-color:blue;}

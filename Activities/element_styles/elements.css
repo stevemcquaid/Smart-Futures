@@ -1,0 +1,62 @@
+* {margin:0;padding:0}
+
+div {
+	margin:0;
+	padding:0;
+}
+
+/* HORIZONTAL LINE */
+hr {
+	width:100%;
+	border: none;
+	border-top: 1px solid black;
+	clear:both;
+}
+
+
+h2 {
+	font-size: medium;
+	font-weight: bold;
+}
+
+#greeting {
+	padding:1em;
+}
+
+.top_bottom_padding {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background-color: white;
+}
+
+.h2_in_main_section{
+	padding:.25em;
+	background-color: white;
+}
+
+
+/* LI ITEM PAIR */
+
+.li_item_pair > div{
+	background-color: white;
+	padding: .5em;
+}
+
+.li_item_pair div.li_item_pair_left{
+	display:inline;
+	background-color: white;
+	line-height: 1.5em;
+}
+
+.li_item_pair div.li_item_pair_right /* NOTE - This element now removed. */ {
+	display:inline;
+	text-align: right;
+	background-color: white;
+	float:right;
+	line-height: 2.2em;
+}
+
+body>div {
+width: 20em;
+background-color: blue;
+}

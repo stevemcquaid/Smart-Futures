@@ -1,0 +1,183 @@
+@divBorderColor: gray;
+@divBorderHoverColor: blue;
+@messageBorders: black;
+@profileFontSize: 1.5em;
+@activityFontSize: 1.3em;
+@messageFontSize: 1.3em;
+@fullHeight: 6em;
+
+@testing1: white;
+@testing2: white;
+@testing3: white;
+@testing4: white;
+
+
+
+
+.center-mixin() {
+	display: table;
+	width: 100%;
+	height: 3em;
+	vertical-align: middle;
+	background-color: @testing3;
+}
+
+.table-cell-mixin(@alignment: left) {
+	display: table-cell;
+	width: 50%;
+	text-align: @alignment;
+	background-color: @testing1;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	display: table-cell;
+	padding:0;
+	margin:0;
+	text-decoration: none;
+}
+
+body {
+	padding: .5em;
+}
+
+.center {
+	display:table-cell;
+}
+
+.mentee_box {
+	height: @fullHeight;
+	width: 100%;
+	display: table;
+	background-color: blue;
+}
+
+.profile {
+	height: @fullHeight;
+	display: table-cell;
+	background-color:  @testing2;
+	vertical-align:middle;
+	width:40%;
+	font-size: @profileFontSize;
+	border-left: 25px solid @divBorderColor;
+	padding: .5em;
+	
+	.mentee_pic {
+	display:table-cell;
+	vertical-align: middle;
+}
+
+.mentee_name {
+	display: table-cell;
+	vertical-align: middle;
+	background-color: @testing2;
+	padding:.5em;
+	min-width: 5em;
+}
+}
+
+.profile:hover {
+	border-left-color: @divBorderHoverColor;
+}
+
+.activities {
+	height: @fullHeight;
+	font-size: @activityFontSize;
+	display: table-cell;
+	background-color: @testing2;
+	vertical-align:middle;
+	width: 40%;
+	border-left: 25px solid @divBorderColor;
+	
+	>.center {
+		display:table;
+		.center-mixin;
+	}
+
+	.activity_data_left {
+		.table-cell-mixin(left);
+		vertical-align: middle;
+		padding: .5em;
+		background-color:  @testing1;
+		
+		.last_activity_completed_num {
+			.table-cell-mixin(left);
+			border: 1px solid black;
+			padding: .3em .5em .3em .5em;
+		}
+	
+		.last_activity_completed_date {
+			.table-cell-mixin(right);
+			padding-left: 1em;
+		}
+	}
+
+	.activity_data_right {
+		.table-cell-mixin(right);
+		vertical-align: middle;
+		padding: .5em;
+		min-width: 50px;
+		text-align: right;
+		background-color: @testing4;
+		/* background: transparent url(files/all_icons.png) 60% 3px no-repeat; */
+		
+	}
+	
+	&:hover {
+	border-left-color: @divBorderHoverColor;
+	}
+}
+
+.messages {
+	height: @fullHeight;
+	font-size: @messageFontSize;
+	display: table-cell;
+	background-color:  @testing4;
+	vertical-align:middle;
+	text-align: center;
+	width: 20%;
+	border-left: 25px solid @divBorderColor;
+	padding: .5em;
+	
+	.center {
+		.center-mixin;
+	}
+
+	.last_date_sent {
+		text-align: center;
+		display: block;
+		padding: .3em;
+		background-color: @testing1;
+	}
+
+	.message_count {
+		display:table;
+		margin:auto; /* Horizontal Center */
+		width:70%;
+		padding: .3em;
+		
+		.unread {
+			.table-cell-mixin(center);
+			padding:.3em;
+			border:1px dashed @messageBorders;
+			border-right: 4px solid @messageBorders;
+			background-color: @testing2;
+			font-weight: bold;
+		}
+		
+		.total {
+			.table-cell-mixin(center);
+			padding:.3em;
+			border:1px dashed @messageBorders;
+			border-left: none;
+		}
+	}
+	&:hover {
+	border-left-color: @divBorderHoverColor;
+	}
+}
+

@@ -1,0 +1,16 @@
+#mentees_box {
+	padding-bottom: 1em;
+}
+
+#mentees_box_wrap {
+	border:1px solid black;
+}
+
+
+#AF_right .li_item_pair{
+	height: 20em;
+}
+
+#AF_right .li_item_pair div {
+	padding: .3em;
+}

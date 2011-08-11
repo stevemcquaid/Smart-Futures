@@ -1,0 +1,97 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: .5em;
+}
+
+/*
+.center { 
+	width: 100%;
+	margin: auto;
+	background-color: blue;
+	vertical-align: middle;
+	line-height: 2em;
+}
+*/
+
+.mentee_box {
+	height: 10em;
+	width: 100%;
+}
+
+.mentee_box > div {
+	background-color: red;
+	margin: auto;
+}
+
+.profile {
+	float: left;
+	width: 15em;
+	line-height:4em;
+	vertical-align: middle;
+}
+
+.activities {
+	float: left;
+	width: 15em;
+	line-height:4em;
+}
+
+.messages {
+	float: left;
+	width: 15em;
+	line-height:4em;
+}
+
+/* Profile Elements */
+.mentee_pic {
+	display:inline-block;
+	height: 70px;
+}
+
+.mentee_name {
+	display:inline-block;
+	height: 35px;
+	vertical-align: middle;
+	line-height: 2em;
+}
+
+/* Activities Elements */
+.activity_data_left {
+	padding-left: 1em;
+	line-height: 2em;
+	display:inline;
+}
+
+.activity_data_right {
+	line-height: 2em;
+	padding-right: 1em;
+	text-align: right;
+	float:right;
+	padding-right: 1em;
+}
+
+.last_activity_completed_num {
+	display: inline;
+	border: 1px solid black;
+	padding-right: .3em;
+	padding-left: .3em;
+
+}
+
+.last_activity_completed_date {
+	margin-left: 1em;
+	display: inline;
+}
+
+/* Messages Elements*/
+.last_date_sent {
+	text-align: center;	
+}
+
+.message_count {
+
+}

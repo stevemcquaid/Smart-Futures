@@ -1,0 +1,90 @@
+ul, li {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+#breadcrumb_wrap_tight {
+	height:2.3em;
+}
+
+#breadcrumb_wrap_tight li {
+	float:left;
+	line-height:2.3em;
+	color:#777;
+}
+
+#breadcrumb_wrap_tight li a:hover {
+	color: red;
+}
+
+#breadcrumb_wrap_tight li.current {
+	color: black;
+}
+
+#breadcrumb_wrap_tight li a {
+	display:block;
+	background:url(breadcrumb_separator.png) no-repeat right center;
+	border-top:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+}
+
+/* Use these paddings to control spacing around text */
+#breadcrumb_wrap_tight li a div {
+	padding-left:.5em;
+	padding-right: 1em; /* VARIABLE_A */
+}
+
+/* normal styles*/
+#breadcrumb_wrap_tight li a:link, #breadcrumb_wrap_tight li a:visited {
+	text-decoration:none;
+	color:gray;
+}
+
+/* hover styles */
+#breadcrumb_wrap_tight li a:hover, #breadcrumb_wrap_tight li a:focus {
+	color: red;
+}
+
+/* current page  styles*/
+#breadcrumb_wrap_tight li.current a:link, #breadcrumb_wrap_tight li.current a:visited {
+	font-weight: bold;
+	color: black;
+	
+}
+
+/* magic happens here for the last item */
+#breadcrumb_wrap_tight div li a {
+	border-top:none;
+	border-bottom:none;
+}
+
+#breadcrumb_wrap_tight div li a div {
+	padding-left: 0;
+	padding-right: .64em; /* VARIABLE_B = spacing between edge of div and text. ie. width of image. This should be plugged into formula below */
+	border-top:none;
+	border-bottom:none;
+}
+
+#breadcrumb_wrap_tight div li a div div {
+/* 	need to remove border becuase, this selector inherits properties from parent: #breadcrumb_wrap_tight div li a div */
+	padding-left: .5em;
+	padding-right: .36em; /* VALUE = VARIABLE_A - VARIABLE_B = 1em-2em=8em*/
+	
+	border-top:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+}
+
+/* SPECIAL TO CONTROL FRONT ARROW */
+#breadcrumb_wrap_tight > li:first-child > a {
+	display: inline-block;
+/* 	border-left: 1px solid #dedede; //LEFT BORDER ON FIRST ITEM*/
+	background:url(breadcrumb_separator.png) no-repeat -0.86em center;
+	padding:0;
+	min-width: .64em; /* VARIABLE_B */
+}
+#breadcrumb_wrap_tight:first-child > li:first-child div{
+	padding: 0;
+	display: -moz-inline-box;
+  display: inline-block;
+}

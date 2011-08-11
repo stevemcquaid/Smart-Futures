@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+	<title>Smart Futures</title>
+	<!-- DO NOT IMPORT "objects.less" here!! -->
+	<link rel="stylesheet" type="text/css" href="style/layout.css">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/toggle.js"></script>
+	<script type="text/javascript">
+	
+	var shownVar=0;
+	function showInputBox(index) {
+		if (shownVar == 1){return;} //cancel if already shown
+		var innerHTML = $(".section_box_text").eq(index).children(".safe_text").html();
+		if (innerHTML == null) {innerHTML = " ";}
+
+		$(".section_box_text").eq(index).children(".safe_text").css('visibility', 'hidden');		
+		var content = '<form name="input" action="resources.html" method="post"><textarea name="txt' + index + '" class="textID" rows="10" cols="46">' + innerHTML + '</textarea></br><button onclick="hideInputBox(' + index + ');">Cancel</button><input type="submit" value="Submit" /></form>';
+		
+		$(".section_box_text").eq(index).html(content);
+		shownVar=1;
+	}
+	
+	function hideInputBox(index) {
+		var innerHTML = $(".section_box_text").eq(index).$(".textID").html();
+		//alert(innerHTML);
+		var content = '<div class="safe_text" onclick="showInputBox(' + index + ');">' + innerHTML + '</div>';
+		$(".section_box_text").eq(index).html(content);
+		$(".section_box_text").eq(index).children(".textID").hide();
+		shownVar=0;
+	}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="navbar">
+			<div class="navbar_backButton"><a href="index.html">Back</a></div>
+			<div class="navbar_textButton"><a href="#">Resources</a></div>
+			<div class="navbar_moreButton"><a id="menuButtonJS" href="#" onclick="toggle('more_menu_wrap')">More<img src="media/moreButton.png" id="menuButtonImg"/></a></div>
+		</div> <!-- End navbar -->
+		<div id="more_menu_wrap">
+			<div class="more_menu_item"><a href="index.html">Home</a></div>
+			<div class="more_menu_item"><a href="profile.html">My Profile</a></div>
+			<div class="more_menu_item"><a href="#">Leave Mobile Site</a></div>
+			<div class="more_menu_item"><a href="#">Log Out</a></div>
+		</div>
+		<div style="clear:both"></div>
+		<div id="main">
+		
+			<div class="section_wrap">
+				<div class="section_title">Ask a Question</div>
+				<div class="section_box">
+					<div class="section_box_text" onclick="showInputBox(0);"><p class="center">Tap this box to ask a question</p></div>
+				</div> <!-- End section_box -->
+			</div> <!-- End section_wrap -->
+			
+			<div class="section_wrap">
+				<div class="section_title">FAQs</div>
+				<div class="section_box">
+					<div class="section_box_text">Who Is Smart Futures?</div>
+					<div class="section_box_text"><p>Smart Futures' vision is all Pennsylvania students graduating from high school prepared for post-secondary success. Smart Futures' Mission is to provide educators in Pennsylvania with online career education resources that help kids "get real", real about who they are, where they are going, and how to get there.</p><p>Smart Futures is a 501c-3 non-profit organization and a leading provider of online career education resources and training to schools and community-based organizations in Pennsylvania. Our online programs include Keys2Work, PA eMentoring, My Career Journey, and Financial Literacy 101. If you are a company interested in offering the program to your employees, an educator wanting to introduce this program to your classroom or an education-supportive intermediary organization that would like to help bring eMentoring to your community, call 412-288-3900.</p></div>
+					<div class="section_box_text">Why PA eMentoring?</div>
+					<div class="section_box_text"><p>Schools are the doorways through which our youths will take advantage of the economic opportunities of tomorrow. Tomorrow's jobs dictate that all students be prepared with strong academic skills and a detailed career focus that helps guide them through increasingly complex post secondary career paths.</p><p>And yet, schools are struggling to make classroom learning relevant to the kids they serve. There are dangerously few resources in place in our schools that provide a window of reality needed to show students what is needed to achieve college and career success.</p></div>
+				</div> <!-- End section_box -->
+			</div> <!-- End section_wrap -->
+			
+		</div> <!-- End main -->
+	</div> <!-- End containter -->
+</body>
+</html>

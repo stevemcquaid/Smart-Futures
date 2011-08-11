@@ -1,0 +1,172 @@
+@import "objects.less";
+
+body{
+	width: 100%;
+	margin: auto;
+	background-color: @mainBorderColor;
+
+}
+
+#container {
+	
+}
+
+.center {text-align: center;}
+
+form {
+	#InputItemSuperClass > .II_Wrap;
+	
+	textarea {
+		#InputItemSuperClass > .II_Textarea;
+	}
+	
+	input {
+		#InputItemSuperClass > .II_Button;
+	}
+	
+	button {
+		#InputItemSuperClass > .II_Button;
+	}
+}
+
+#navbar {
+	display: block;
+	width: 100%;
+	#NavItemSuperClass > .NI_Wrap;
+	
+	.navbar_linkButton {
+		#NavItemSuperClass > .NI_linkButton;
+	}
+	
+	.navbar_textButton {
+		#NavItemSuperClass > .NI_textButton;
+	}
+	
+	.navbar_moreButton {
+		#NavItemSuperClass > .NI_moreButton;
+		
+		img {
+			#NavItemSuperClass > .NI_moreButton > .NI_moreButtonImg;
+			margin-left: 9px;
+			margin-bottom: 4px;
+		}
+	}
+
+	.navbar_backButton {
+		#NavItemSuperClass > .NI_backButton;
+	}
+}//end of #navbar
+
+#more_menu_wrap {
+	#NavItemSuperClass > .NI_moreMenu;
+	visibility: hidden;
+	
+	.more_menu_item {
+		#NavItemSuperClass > .NI_moreMenuItem;
+	}
+}
+
+#main {
+	margin-left: .3em;
+	margin-right: .3em;
+	
+	.section_wrap {
+		#TextItemSuperClass > .TI_boxWrap;
+		
+		.section_title {
+			#TextItemSuperClass > .TI_Title;
+		}
+		
+		.section_box {
+			#TextItemSuperClass > .TI_Box;
+			
+			.section_box_text {
+				#TextItemSuperClass > .TI_boxText(left);
+				clear:both;
+			}
+			
+			.li_item_pair_left {
+				#TextItemSuperClass > .TI_leftCell;
+			}
+			
+			.li_item_pair_right {
+				#TextItemSuperClass > .TI_rightCell;
+			}
+			
+			.section_box_item {
+				#TextItemSuperClass > .TI_boxItem();
+				display:table;
+				width:100%;
+			}
+			
+			.new_item {
+				#TextItemSuperClass > .TI_newItem;
+				display:table;
+			}
+			
+			.actionable_item {
+				#TextItemSuperClass > .TI_actionableItem;
+				display:table;
+			}
+			
+			.mentee {
+			
+				.mentee_box {
+				
+					.profile {
+						a {
+							#MenteeItemSuperClass > .MI_profileSection;
+							.mentee_pic {
+								#MenteeItemSuperClass > .MI_profileImg;
+							}
+							
+							.mentee_name {
+								#MenteeItemSuperClass > .MI_name;
+							}
+							
+						}//end of a
+					}//end of .profile
+					
+					.activities {
+						a {
+							#MenteeItemSuperClass > .MI_activitySection;
+							
+							h4 {
+								#MenteeItemSuperClass > .MI_activityTitle;
+							}
+							
+							ul {
+								#MenteeItemSuperClass > .MI_activityTable;
+								li {
+									#MenteeItemSuperClass > .MI_activityBox;
+								}
+								
+								.complete {
+									#MenteeItemSuperClass > .MI_complete;
+								}
+							}//end of ul
+						
+						}//end of a
+					}//end of .activities
+					
+					.messages {
+						a {
+							#MenteeItemSuperClass > .MI_messageSection
+							
+							.total_messages {
+								#MenteeItemSuperClass > .MI_totalMessages
+							}
+							
+							.unread_messages {
+							
+							}
+							
+						}//end of a
+					}//end of .messages
+					
+				}//end of .mentee_box
+			}//end of .mentee
+			
+		}//end of .section_box
+	}//end of .section_wrap
+}//end of #main

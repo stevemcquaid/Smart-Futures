@@ -1,0 +1,22 @@
+Conclusion: Alerts should be a type of Notification
+
+WHAT IS THEIR PURPOSE?
+
+Alerts = warn user of a requirement - it is to correct for an incorrect or mandatory action
+
+Notification = bring something to the user's attention.
+
+---
+
+Thus what they have in common is that they must bring something to the user's attention, but alerts go a step further in terms of severity.
+
+MY SOLUTION:  A red alert circle next to the notification box.
+(For example, while we have a notification that a mentee sent a message, should the mentor move ahead, or if other mentees write him/her,  that notification moves off the screen and becomes lost history.)
+
+
+Separate alerts and notifications by bold vs non-bold in the notification window.  For the user, all of the items are notifications.  An alert is merely a specific type of notification.
+
+
+Clicking this can do 1 of two things:
+1. Bring the bolded alert to the top of the notification box.
+2. Go to the earlier unfinished alert to complete. (This is risky, because if the user does not know what to complete, they are stuck at that step with no way to move forward.)

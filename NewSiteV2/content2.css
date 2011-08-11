@@ -1,0 +1,120 @@
+h2 {
+	font-size: medium;
+	font-weight: bold;
+}
+
+
+/* Activity Feed Styling */
+
+#activity_wrap_tight {
+	width: 100%;
+	height: 17em; 
+}
+
+.li_item_date_pair{
+	background-color: white;
+	padding: 1em;
+	padding-top:0;
+	overflow: auto;
+	height:14.35em;
+}
+
+.li_item_date_pair > div{
+	background-color: white;
+	padding: 1em;
+}
+
+.li_item_date_pair div.li_item_date_pair_left{
+	display:inline;
+	background-color: white;
+}
+
+.li_item_date_pair div.li_item_date_pair_right /* NOTE - This element now removed. */ {
+	display:inline;
+	text-align: right;
+	background-color: white;
+	float:right;
+}
+
+#AF_left {
+	background-color: white;
+	border: 1px solid black;
+	float:left;
+	width: 55%;
+	height: 100%;
+}
+
+#AF_right {
+	background-color: white;
+	border: 1px solid black;
+	float:right;
+	width:40%;
+}
+
+#stats_wrap {
+ 	background-color: white;
+ 	padding: 1em;
+ 	padding-top:0;
+ 	padding-bottom: 0;
+}
+
+.top_bottom_padding {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background-color: white;
+}
+
+#news_wrap_tight {
+	border:1px solid black;
+}
+
+.h2_in_main_section{
+	padding:.25em;
+	background-color: white;
+}
+
+#stats_wrap_status_text {
+	display: inline;
+}
+
+#stats_wrap_status_edit {
+	display:inline;
+	float: right;
+	padding-right:1em;
+}
+
+#stat_footer_wrap div:first-child {
+	background-color: white;
+	float: none;
+	display:inline;
+}
+
+#stat_footer_wrap div {
+	display:inline;
+}
+
+
+/* AC code */
+.activities_completed > div{
+	padding-bottom:.25em;
+}
+
+.activities_completed li {
+	display: inline;
+	float:left;
+	list-style-type: none;
+	padding: 0 .6em;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.activities_completed ul li:first-child {
+	border: 1px solid black;
+}
+
+.activities_completed ul {
+	height:2em;
+	line-height: 1.9em;
+	padding-left: .5em; /* Controls centering (offset) */
+}

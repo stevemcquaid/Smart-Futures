@@ -1,0 +1,486 @@
+@white: #fff;
+@black: #000;
+@dgray: #343434;
+@mgray: #787878;
+@lgray: #e0e0e0;
+@graygreen: #a9ac9e;
+@dgreen: #93bc02;
+@mgreen: #b0cc4a;
+@lgreen: #d3ea9d;
+@purple: #51386f;
+@red: #ba4104;
+@lred: #f7dfd9;
+
+/* FONTS
+------------------------------------------------------------ */
+@font-face{font-family:'PTSansNarrow';src:url('fonts/PTSansNarrow.eot');src:url('fonts/PTSansNarrow.eot?#iefix') format('embedded-opentype'),url('fonts/PTSansNarrow.woff') format('woff'),url('fonts/PTSansNarrow.ttf') format('truetype'),url('fonts/PTSansNarrow.svg#PTSansNarrowRegular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'PTSansCaptionBold';src:url('fonts/PTSansCaptionBold.eot');src:url('fonts/PTSansCaptionBold.eot?#iefix') format('embedded-opentype'),url('fonts/PTSansCaptionBold.woff') format('woff'),url('fonts/PTSansCaptionBold.ttf') format('truetype'),url('fonts/PTSansCaptionBold.svg#PTSansCaptionBold') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'PTSansBold';src:url('fonts/PTSansBold.eot');src:url('fonts/PTSansBold.eot?#iefix') format('embedded-opentype'),
+url('fonts/PTSansBold.woff') format('woff'),url('fonts/PTSansBold.ttf') format('truetype'),url('fonts/PTSansBold.svg#PTSansBold') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'PTSansItalic';src:url('fonts/PTSansItalic.eot');src:url('fonts/PTSansItalic.eot?#iefix') format('embedded-opentype'),url('fonts/PTSansItalic.woff') format('woff'),url('fonts/PTSansItalic.ttf') format('truetype'),url('fonts/PTSansItalic.svg#PTSansItalic') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'PTSans';src:url('fonts/PTSans.eot');src:url('fonts/PTSans.eot?#iefix') format('embedded-opentype'),url('fonts/PTSans.woff') format('woff'),url('fonts/PTSans.ttf') format('truetype'),url('fonts/PTSans.svg#PTSansRegular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'PTSansNarrowBold';src:url('fonts/PTSansNarrowBold.eot');src:url('fonts/PTSansNarrowBold.eot?#iefix') format('embedded-opentype'),url('fonts/PTSansNarrowBold.woff') format('woff'),url('fonts/PTSansNarrowBold.ttf') format('truetype'),url('fonts/PTSansNarrowBold.svg#PTSansNarrowBold') format('svg');font-weight:normal;font-style:normal;}
+
+
+.round_corner (@radius: 2px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+
+/* Main Color Palette */
+@mainFontColor: black;
+@mainBGColor: white;
+@mainBorderColor: #343434; //gray
+@mainAccent1Color: #93BC02; //green
+@mainAccent2Color: #5D4080; //purple
+@mainAccent3Color: #EBEBEB; //highlight silver
+@mainFontFamily: Tahoma, verdana, arial, sans-serif;
+
+#GenericsSuperClass {
+	.centerTableCell(@align: center) {
+		display:table-cell;
+		text-align: @align;
+		vertical-align: middle;
+	}
+	
+	.standardizeBoxModel() {
+	/* 				Standardize Box Model to Allow Width:100% to fill container, not overflow */
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	  box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+	
+	.round_corner (@radius: 2px) {
+		border-radius: @radius;
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+	}
+	
+	.shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+		box-shadow: @arguments;
+		-moz-box-shadow: @arguments;
+		-webkit-box-shadow: @arguments;
+	}
+
+}
+
+#NavItemSuperClass {
+/* 	Globals Inheritance */
+	@NI_FontColor: @mainBGColor;
+	@NI_BGColor: @mainAccent1Color;
+	@NI_BorderColor: @mainAccent1Color;
+	@NI_Accent1Color: @mainBGColor;
+	@NI_Accent2Color: @mainBorderColor;	
+/* Dimensions */
+	@NI_SC_Height: 2.1em;
+	@NI_ButtonWidth: 33%;
+	@NI_ButtonMinWidth: 5em;
+/* 	Button Styles */
+	@NI_FontSize: 1.1em;
+	@NI_FontFamily: @mainFontFamily;
+/* 	Misc */
+	@NI_VerticalCenteringOffset: (@NI_SC_Height - 1.1 * @NI_FontSize);
+	@NI_borderRadius: 8px;
+	
+/* 	Helpers */
+	.tableAnchorStyle() {
+		display: block;
+		width: 100%;
+		height:@NI_SC_Height;
+		line-height: @NI_FontSize + @NI_VerticalCenteringOffset;
+		font-size: @NI_FontSize;
+		
+		//Style
+		color: @NI_FontColor;
+/* 		background-color: @NI_BGColor; */
+		font-family: @NI_FontFamily;
+		text-decoration: none;
+	}
+	
+/* 	Constructors */
+	.NI_Wrap() {
+		display: table;
+		width: 100%;
+		height: @NI_SC_Height;
+	}
+	
+	.NI_linkButton() {
+		#GenericsSuperClass>.centerTableCell;
+		width: @NI_ButtonWidth;
+		min-width: @NI_ButtonMinWidth;
+		height:@NI_SC_Height;
+		//Style
+		color: @NI_FontColor;
+		background-color: @NI_BGColor;
+		font-size: @NI_FontSize;
+		
+		//Comment This out to remove nav rounded borders
+		border-bottom: 1px solid @NI_BGColor;
+		-moz-border-bottom-left-radius: @NI_borderRadius;
+		-moz-border-bottom-right-radius: @NI_borderRadius;
+		border-bottom-left-radius: @NI_borderRadius;
+		border-bottom-right-radius: @NI_borderRadius;
+		
+		a {
+			#NavItemSuperClass>.tableAnchorStyle;
+		}
+		
+	}
+	
+	.NI_moreButton() {
+		//Extends .NI_linkButton
+		.NI_linkButton;
+		
+		.NI_moreButtonImg {
+				padding-bottom: 0em;			
+		}
+	}	
+	
+	.NI_backButton() {
+		//Extends .NI_linkButton
+		.NI_linkButton;
+		//width: 5%;
+		text-decoration: none;
+	}
+	
+	.NI_textButton() {
+		//Extends .NI_linkButton
+		.NI_linkButton;
+		background-color: transparent;
+		color: @NI_BorderColor;
+		border-bottom: 1px solid @NI_Accent2Color;
+	}
+	
+	.NI_moreMenuItem() {
+		//Extends .NI_linkButton
+		.NI_linkButton;
+		//Override
+		background-color: transparent;
+		border: none;
+		//Display
+		display: table;
+		width: 100%;
+		font-size: .9em;
+		
+		a {
+			text-align: center;
+		}
+	}
+	
+	.NI_moreMenu() {
+		//Positioning
+		display:table;
+		position:absolute;
+		padding-top: .5em;
+		width: 50%; //Depreciated
+		top: @NI_FontSize + .5 * @NI_SC_Height;
+		right:0;
+		
+		//Comment out for right alighned menu
+	  right: 0;
+	  left: 0;
+	  width: 60%;
+		margin:auto;
+		
+		
+		//Style
+		background-color: @NI_BGColor;
+		
+		//Comment This out to remove nav rounded borders
+		border-bottom: 1px solid @NI_BGColor;
+		@NI_borderRadius: 20px;
+		-moz-border-bottom-left-radius: @NI_borderRadius;
+		-moz-border-bottom-right-radius: @NI_borderRadius;
+		border-bottom-left-radius: @NI_borderRadius;
+		border-bottom-right-radius: @NI_borderRadius;
+		border-bottom-right-radius: @NI_borderRadius;
+
+	}	
+	
+
+} //end of #NavItemSuperClass
+
+#TextItemSuperClass {
+/* 	Inheritance */
+	@TI_FontColor: @mainFontColor;
+	@TI_FontFamily: @mainFontFamily;
+	@TI_BGColor: @mainBGColor;
+	@TI_BorderColor: @mainBorderColor;
+	@TI_BorderRadius: 5px;
+/* 	Dimension Parameters */
+	@TI_Padding: .5em;
+	@TI_BorderThickness: 3px;
+/* 	Regular Text */
+	@TI_FontFamily: @mainFontFamily;
+/* 	RegularItem */
+	@TI_ItemBGColor: fadeout(@mainAccent3Color, 70%);
+/* 	Actionable Items */
+	@TI_ActionableItemFontColor:@mainFontColor;
+	@TI_ActionableItemBGColor: fadeout(@mainAccent1Color, 70%);
+	@TI_ActionableItemBorderColor:@mainAccent1Color;
+/* 	New Items */
+	@TI_NewItemFontColor:@mainFontColor;
+	@TI_NewItemBGColor: fadeout(@mainAccent2Color, 70%);
+	@TI_NewItemBorderColor:@mainAccent2Color;
+
+	.TI_boxWrap() {
+		//Should NOT have a background Color
+	}
+
+	.TI_Title() {
+		color: @TI_BGColor;
+		font-family: @TI_FontFamily;
+		font-size: .8em;
+		text-align: center;
+		line-height: 1.5em;
+/* 		padding-left: 1em; */
+		//Should NOT have a background color
+	}
+	
+	.TI_Box() {
+/********* 	  Temp */
+		background-color: @TI_BGColor;
+		border: 1px solid @TI_BGColor;
+		padding: @TI_Padding/2;
+		padding-top: @TI_Padding/10;
+		padding-bottom: @TI_Padding/10;
+		-moz-border-radius: @TI_BorderRadius + 3;
+		border-radius: @TI_BorderRadius + 3;
+/********* 		Temp */
+		border:4px solid @mainAccent3Color;
+	}
+	
+	.TI_boxItem() {
+		#GenericsSuperClass>.centerTableCell(left);
+		#GenericsSuperClass > .standardizeBoxModel;
+/* 		Top and bottom spacing for each element */
+		margin-top: @TI_Padding/2;
+		margin-bottom: @TI_Padding/2;
+		padding-top: @TI_Padding/2;
+		padding-bottom: @TI_Padding/2;
+		padding-left: @TI_Padding;
+		padding-right: @TI_Padding;
+		//Style
+		color: @TI_FontColor;
+		font-family: @TI_FontFamily;
+		border-left: @TI_BorderThickness solid @TI_BorderColor;
+		background-color: @TI_ItemBGColor;
+		-moz-border-bottom-right-radius: @TI_BorderRadius;
+		border-bottom-right-radius: @TI_BorderRadius;
+		-moz-border-top-right-radius: @TI_BorderRadius;
+		border-top-right-radius: @TI_BorderRadius;
+		
+		
+		a {
+			color: @TI_FontColor;
+			text-decoration: none;
+		}
+	}
+	
+	.TI_boxText(@align: center) {
+		//Extends .TI_boxItem
+		.TI_boxItem;
+		-moz-border-radius: @TI_BorderRadius;
+		border-radius: @TI_BorderRadius;
+		border-left:none;
+		text-align: @align;
+		display: block;
+		
+		p{}
+	}
+	
+	.TI_leftCell() {
+		#GenericsSuperClass>.centerTableCell(left);
+		padding-right: @TI_Padding;
+	}
+	
+	.TI_rightCell() {
+		#GenericsSuperClass>.centerTableCell(right);
+	}
+	
+	.TI_newItem() {
+		//Extends .TI_boxItem
+		.TI_boxItem;
+		//Style
+			border-left: @TI_BorderThickness solid @TI_NewItemBorderColor;
+			background-color: @TI_NewItemBGColor;
+
+		a {
+			//Override
+			//Style
+			color: @TI_NewItemFontColor;
+		}
+	}
+	
+	.TI_actionableItem() {
+		//Extends .TI_boxItem
+		.TI_boxItem;
+		//Style
+		border-left: @TI_BorderThickness solid @TI_ActionableItemBorderColor;
+		background-color: @TI_ActionableItemBGColor;
+		
+		a {
+			//Override
+			//Style
+			color: @TI_ActionableItemFontColor;
+		}
+	}
+} //end of TextItemSuperClass
+
+#InputItemSuperClass {
+/* 	Inheritance */
+	@II_FontColor: @mainFontColor;
+	@II_BGColor: @mainBGColor;
+	@II_BorderColor: @mainBorderColor; //gray
+	@II_Accent1Color: @mainAccent1Color; //green
+	@II_Accent2Color: @mainAccent2Color; //purple
+	@II_Accent3Color: @mainAccent3Color; //highlight silver
+	@II_FontFamily: @mainFontFamily;
+	
+	@II_BorderRadius: 5px;
+	
+	@II_MarginY:.5em;
+	
+	@II_Padding: .8em;
+	
+	.II_Wrap() {
+		.II;
+		#GenericsSuperClass > .centerTableCell;
+		#GenericsSuperClass > .standardizeBoxModel;
+		display: table;
+		width:100%;
+	}
+	
+	.II {
+		margin: 0;
+		
+		font-family: @II_FontFamily;
+		color: @II_FontColor;
+		//background-color: @II_BGColor;
+	}
+	
+	.II_Textarea() {
+		//Extends .II
+		.II;
+		#GenericsSuperClass > .standardizeBoxModel;
+
+		display: block;
+		margin: @II_MarginY;
+    margin-left: auto;
+    margin-right: auto;
+    padding: @II_Padding;
+    width: 100%;
+    
+    border: 1px solid @II_BorderColor;
+    font-family: Courier, serif;
+	}
+	
+	.II_inputBox() {
+		//Extends .II
+		.II;
+	}
+	
+	.II_Button() {
+		//Extends .II
+		.II;
+		#GenericsSuperClass > .centerTableCell;
+		-webkit-appearance: button;
+		
+    margin: @II_Padding;
+    margin-bottom:  @II_MarginY;
+    margin-top: @II_MarginY;
+		padding: @II_Padding;
+		font-size: .8em;
+    
+    color: @II_FontColor;
+    background: fadeout(@mainAccent3Color, 70%);
+    border: 4px solid @II_Accent2Color;
+		-moz-border-radius: @II_BorderRadius * 2;
+		-webkit-border-radius: @II_BorderRadius * 2;
+		border-radius: @II_BorderRadius * 2;
+	}
+}
+
+#MenteeItemSuperClass {
+	//Profile
+	.MI_profileSection {
+	}
+		.MI_profileImg() {
+			
+		}
+		
+		.MI_name() {
+			
+		}
+	
+	//Activities
+	.MI_activitySection() {
+	}
+	
+		.MI_activityTitle() {	
+		}
+		
+		.MI_activityTable() {
+		}
+			.MI_activityBox() {
+				background-color: red;
+			}
+			
+			.MI_complete() {
+				//extends .MI_activityBox
+				.MI_activityBox;
+			}
+	
+	//Message
+	.MI_messageSection() {
+	}
+		
+		.MI_messageItem {
+			//Abstract class, defines basic message styles
+		}
+		
+		.MI_totalMessages() {
+			//Extends .MI_messageItem
+			.MI_messageItem;
+		}
+		
+		.MI_unreadMessage() {
+			//Extends .MI_messageItem
+			.MI_messageItem;
+		}
+		
+}//end of MenteeItemSuperClass
+
+#ActivitiyItemSuperClass {
+	.AI_datesSection() {
+	
+		.AI_started() {
+		
+		}
+		
+		.AI_completed() {
+		
+		}
+	}
+	
+	.AI_commentsSection() {
+		right: 0;
+		bottom: 0;
+		
+		.AI_totalComments() {
+		
+		}
+		
+		.AI_newComments() {
+		
+		}
+	}
+
+}//end of ActivityItemSuperClass

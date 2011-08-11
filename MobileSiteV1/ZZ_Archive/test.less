@@ -1,0 +1,16 @@
+@import "../style/objects.less";
+#bundle {
+  .button () {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover { background-color: white }
+  }
+  .tab {  }
+  .citation {  }
+}
+//Now if we want to mixin the .button class in our #header a, we can do:
+
+#header a {
+  #NavItemSuperClass > .NI_linkButton;
+}
